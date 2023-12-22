@@ -13,6 +13,7 @@ app.get("/", (request, response) => {
 });
 
 // Configuration goes here
+// This lets us read POST'ed JSON body data on the request, otherwise wont work
 app.use(express.json());
 
 // Router goes below
