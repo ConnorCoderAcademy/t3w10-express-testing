@@ -12,6 +12,19 @@ app.get("/", (request, response) => {
     });
 });
 
+// Configuration goes here
+app.use(express.json());
+
+// Router goes below
+
+app.post("/", (request, response)=> {
+    // Just copy what the posted data is
+    // Attach it to response.body.received 
+    response.json({
+        received: request.body.message
+    })
+})
+
 module.exports = {
     app, PORT
 }
