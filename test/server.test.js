@@ -12,7 +12,7 @@ describe("Server root route exists and returns hello world", ()=> {
     })
     test("Root route exists and returns hello world as a message", async ()=>{
         const response = await request(app).get("/");
-        expect(response.body.message).toEqual("Hello world!");
+        expect(response.body.message).toEqual("Hello World!");
     });
 });
 
